@@ -7,6 +7,8 @@ include_once('userfunctions.php');
     <header>
         <title>User Info</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" scr="order.js"></script>
     </header>
     <body>
         <div id="nav">
@@ -22,8 +24,13 @@ include_once('userfunctions.php');
         <div>
             <form>
                 <fieldset>
-                    <h3>Order</h3>
-                    
+                    <h3>Order</h3><br>
+                    <label class = "label" for="food-name">Food item</label>
+                    <input type = "text" id="food-name" name = "food-name"><br>
+                    <label class = "label" for="food-units">Quantity</label>
+                    <input type = "number" id="food-units" name="food-units"><br>
+                    <button id="order">Order</button>
+
                 </fieldset>
             </form>
         </div>
