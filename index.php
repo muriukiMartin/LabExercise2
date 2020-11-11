@@ -13,14 +13,13 @@ include_once('userfunctions.php');
     <body>
         <div id="nav">
            <img src ="<?php echo "images/".$_SESSION['photo']?>" width=50px/>
+           <p>Full Name: <?php echo $_SESSION['name'] ?></p>
+           <p>Email: <?php echo $_SESSION['email'] ?></p>
+           <p>City of Residence: <?php echo $_SESSION['city'] ?></p>
+           <button><a href="PassChange.php">Change Password</a></button>
            <a href="logout.php">Logout</a>
         </div>
-        <div>
-        <p>Full Name: <?php echo $_SESSION['name'] ?></p>
-        <p>Email: <?php echo $_SESSION['email'] ?></p>
-        <p>City of Residence: <?php echo $_SESSION['city'] ?></p>
-        <button><a href="PassChange.php">Change Password</a></button>
-        </div>
+        
         <div>
             <form>
                 <fieldset>
@@ -29,7 +28,7 @@ include_once('userfunctions.php');
                     <input type = "text" id="food-name" name = "food-name"><br>
                     <label class = "label" for="food-units">Quantity</label>
                     <input type = "number" id="food-units" name="food-units"><br>
-                    <button id="order">Order</button>
+                    <button onclick="order()" id="order">Order</button>
 
                 </fieldset>
             </form>

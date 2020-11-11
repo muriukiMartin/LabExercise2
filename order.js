@@ -1,10 +1,11 @@
-$(document).ready('function')() ;{
-    $('#order').click(function () { })(event); {
-        event.preventDefault();
+document.querySelector('#order').addEventListener('click', order);
         //fetch data from form
+        function order(){
         var food = $('food-name').val();
         var number = $('food-units').val();
         alert("This feature is coming soon");
+        }
+    
         //construct and send http request,url,body,header(custom),method
         // $.ajax({
         //     url: "api.foodapi.com/order",
@@ -23,5 +24,4 @@ $(document).ready('function')() ;{
         //         alert("Error occurred");
         //     },
         // })
-    };
-}
+    //};
