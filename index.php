@@ -33,5 +33,17 @@ include_once('userfunctions.php');
                 </fieldset>
             </form>
         </div>
+        <div>
+            <form>
+                <fieldset>
+                    <h3>Order</h3><br>
+                    <label class = "label" for="order-id">Order ID</label>
+                    <input type = "text" id="order-id" name = "order-id"><br>
+                    
+                    <button id="check">Order</button>
+
+                </fieldset>
+            </form>
+        </div>
     </body>
 </html>

@@ -1,7 +1,14 @@
 #label{
     color:white;
 }
-form{
+fieldset{
     text-align:center;
-    background-color:white;
+    background-color:white
+}
+#nav{
+    display:inline;
+    list-style:none;
+}
+button{
+    color:red;
 }
