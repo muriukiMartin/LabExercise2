@@ -1,14 +1,66 @@
-#label{
-    color:white;
+
+
+#form{
+    margin:auto;
+    text-align: center;
+    background-color: rgb(87, 17, 17);
+    border: solid 5px black;
+    width: 650px;
+    
+    
 }
-fieldset{
-    text-align:center;
-    background-color:white
+.label{
+    margin: auto;
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: table-cell;
 }
-#nav{
-    display:inline;
-    list-style:none;
+.submit{
+    background-color: black;
+}
+
+#profile-photo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px; 
+    float: left;
+}
+#info{
+    margin: auto;
+    text-align: center;
+    height: 150px;
+    width: 620px;
+    background-color: rgb(20, 95, 105);
+    border: solid 2px black;
+}
+#info1{
+    float:right;
+}
+p{
+    font-size:15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 button{
-    color:red;
+    background-color:black;
+}
+#details{
+    display: table-cell;
+}
+input[type=text], input[type=password], input[type=email], input[type=number] {
+    
+    
+    display: table-cell;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=file]{
+    width: 70%;
+    background: #2b01010c;
+    border: solid 1px rgba(0, 0, 0, 0.726);
+}
+a{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
 }

@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
 <title>Registration</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-</header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <body>
-    <div id="nav">
-       
-        <a href="login.php">Login</a>
-       
-    </div>
-    <div>
-        <form action="actions.php" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <h3>Registration Form</h3><br>
-            <label class="label" for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="At least 2 names"><br>
+    <div class="container-fluid">
+        <div id="nav">
+            <a href="login.php">Login</a>
+        </div>
+        <div id="form">
+            <form action="actions.php" method="post" enctype="multipart/form-data">
+        
+                <h3>Registration Form</h3>
+                <div id="details">
+                    <label class="label" for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="At least 2 names"><br><br>
 
-            <label class="label" for="email">Email Address</label>
-            <input type="email" id="email" name="email"><br>
+                    <label class="label" for="email">Email Address</label>
+                    <input type="email" id="email" name="email"><br><br>
 
-            <label class="label" for="city">City</label>
-            <input type="text" id="city" name="city"><br>
-            
-	        <label class="label" for="pass">Create password</label>
-            <input type="password" id="pass" name="pass"><br>
-            
-            <label class="label" for="confirm">Confirm password</label>
-            <input type="password" id="confirm" name="comfirm"><br>
+                    <label class="label" for="city">City</label>
+                    <input type="text" id="city" name="city"><br><br>
+                
+                    <label class="label" for="pass">Create password</label>
+                    <input type="password" id="pass" name="pass"><br><br>
+                
+                    <label class="label" for="confirm">Confirm password</label>
+                    <input type="password" id="confirm" name="comfirm"><br><br>
 
-            <label class="label" for="photo">Profile photo</label>
-            <input type="file" id="photo" name="photo"><br>
-
-            <input type="submit" name="register" value="Register">
-        </fieldset>
-        </form>
+                    <label class="label" for="photo">Profile photo</label>
+                    <input class="input" type="file" id="photo" name="photo"><br><br>
+                    
+                    <input class="submit" type="submit" name="register" value="Register">
+                    <hr>
+                    <p>Already a member?<a href="login.php">Log in</a></p>
+                </div>
+        
+            </form>
+        </div>
     </div>
 </body>
 </html>
