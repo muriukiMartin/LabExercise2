@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -34,8 +34,8 @@
                     <label class="label" for="confirm">Confirm password</label>
                     <input type="password" id="confirm" name="comfirm"><br><br>
 
-                    <label class="label" for="photo">Profile photo</label>
-                    <input class="input" type="file" id="photo" name="photo"><br><br>
+                    <!-- <label class="label" for="photo">Profile photo</label> -->
+                    <input class="input" type="file" id="photo" name="photo" value="Profile Photo" style="background-color:black;"><br><br>
                     
                     <input class="submit" type="submit" name="register" value="Register">
                     <hr>

@@ -96,7 +96,7 @@ class User implements Account{
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ? AND user_password = ?");
                 $stmt->execute([$this->email,$this->userPass]);
                 $result = $stmt->fetch();
-                //$stmt = null;
+                $stmt = null;
                 return $result;
             }else {
                 echo "Wrong password. Please try again";
@@ -109,16 +109,16 @@ class User implements Account{
     public function changePassword($pdo){
         try{
             $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-            $stmt->execute([$this->email]);
+            $stmt->execute([$_SESSION['email']]);
             $result = $stmt->fetch();
             $this->userPass = $result['user_password'];
-            return $this->userPass;
-            return $this->inputPass;
-            return $this->newPass;
+            echo $this->userPass;
+            echo $this->inputPass;
+            echo $this->newPass;
         
             if(password_verify($this->inputPass, $this->userPass)){
-                $stmt = $pdo->prepare("UPDATE users SET user_password = ? WHERE id = ? AND email= ?");
-                $stmt->execute([$this->newPass, $_SESSION['id'], $this->userPass]);
+                $stmt = $pdo->prepare("UPDATE users SET user_password = ? WHERE id = ?");
+                $stmt->execute([$this->newPass, $_SESSION['id']]);
                 $result = $stmt->fetch();
                 $stmt = null;
                 return "Password changed";

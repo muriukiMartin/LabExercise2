@@ -42,19 +42,20 @@ if(isset($_POST['login'])){
     $_SESSION['email'] = $details['email'];
     $_SESSION['city'] = $details['city'];
     $_SESSION['photo'] = $details['profile_photo'];
-
-    header("Location: index.php");
+    // $_SESSION["login_time_stamp"] = time(); 
+    header("Location: order.php");
 }
 else{
+    echo "Username or Password does not match";
     header("Location: login.php");
 }
 
 if(isset($_POST['change'])){
-    $inputPass = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $inputPass = $_POST["password"];
     $newPass = password_hash($_POST["newpass"], PASSWORD_DEFAULT);
-    
+    $confirm = $_POST['confirm-password'];
 
-    if(password_verify($inputPass,$newPass)){
+    if(password_verify($confirm,$newPass)){
         $user = new User();
         $user->setInputPass($inputPass);
         $user->setNewPass($newPass);
