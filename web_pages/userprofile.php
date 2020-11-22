@@ -1,15 +1,15 @@
 <?php
  session_start();
  if(!$_SESSION['name']){
-     header("Location: login.php");
+     header("Location: ../web_pages/login.php");
  }
-include_once('userfunctions.php');
+include_once('../web_actions/userfunctions.php');
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>User Info</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../styling/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,10 +22,10 @@ include_once('userfunctions.php');
             <div id="nav">
                 <a href="order.php">Make Order</a>
                 <a href="PassChange.php">Change Password</a>
-                <a href="logout.php">Logout</a>
+                <a href="../web_actions/logout.php">Logout</a>
             </div>
             <div id="info">
-            <img id="profile-photo" src ="<?php echo "images/".$_SESSION['photo']?>" />
+            <img id="profile-photo" src ="<?php echo "../images/".$_SESSION['photo']?>" />
             <div id="info1">
             <p>Welcome <?php echo $_SESSION['name'] ?></p>
             <p>Email: <?php echo $_SESSION['email'] ?></p>

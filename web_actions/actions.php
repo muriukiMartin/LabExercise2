@@ -25,7 +25,7 @@ if(isset($_POST["register"])){
     
     $con = $user->register($pdo);
     echo $con;
-    header("Location: login.php");
+    header("Location: ../web_pages/login.php");
 }
 
 if(isset($_POST['login'])){
@@ -43,11 +43,11 @@ if(isset($_POST['login'])){
     $_SESSION['city'] = $details['city'];
     $_SESSION['photo'] = $details['profile_photo'];
     // $_SESSION["login_time_stamp"] = time(); 
-    header("Location: order.php");
+    header("Location: ../web_pages/order.php");
 }
 else{
     echo "Username or Password does not match";
-    header("Location: login.php");
+    header("Location: ../web_pages/login.php");
 }
 
 if(isset($_POST['change'])){
@@ -61,7 +61,7 @@ if(isset($_POST['change'])){
         $user->setNewPass($newPass);
         $con = $user->changePassword($pdo);
         echo $con;
-        header("Location: login.php");
+        header("Location: ../web_pages/login.php");
     }else{
         echo "No match";
     }

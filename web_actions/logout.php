@@ -10,5 +10,5 @@ $link = new Connector();
 $pdo = $link->connect();
 $user = new User();
 $user->logout($pdo);
-header("Location: login.php");
+header("Location: ../web_pages/login.php");
 ?>

@@ -69,10 +69,9 @@ a{
     text-align: center;
 }
 #order-form{
-    border: solid 3px black;
-    background-color: rgb(11, 139, 156);
-    margin-bottom: 60px;
-    margin-left: 350px;
+    margin:auto;
     text-align: center;
-    width: 600px;
+    background-color: rgb(87, 17, 17);
+    border: solid 5px black;
+    width: 650px;
 }

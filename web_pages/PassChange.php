@@ -8,7 +8,7 @@ if(!$_SESSION['name']){
 <html>
     <head>
         <title>Change Password</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../styling/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -21,7 +21,7 @@ if(!$_SESSION['name']){
                 <a href="index.php">Home</a>
             </div>
             <div id="form">
-                <form action="actions.php" method="post">
+                <form action="../web_actions/actions.php" method="post">
                     
                     <h4>Password change</h4>
                     <label class="label" for="password">Current password</label>
@@ -33,7 +33,8 @@ if(!$_SESSION['name']){
                     <label class="label" for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password"><br> 
 
-                    <input type="submit" name="change" value="Change Password">
+                    <button>Change Password</button>
+                    <button><a href="userprofile.php"></a>Cancel</button>
                         
                 </form>
             </div>
